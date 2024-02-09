@@ -45,7 +45,6 @@ body, html {
 .header li {
     height: 100%;
     float: right;
-    padding: 0 80px;
 }
 
 .header a {
@@ -56,10 +55,60 @@ body, html {
     color: white;
     transition: .2s ease;
 }
-
-.header a:hover {
+.navigation-down li a:hover:not(.drop-down li a) {
     background-color: white;
     color: rgb(16, 16, 16);
+}
+
+.navigation-down li:not(.drop-down li) {
+    height: 100%;
+    margin: 0 80px;
+    position: relative;
+}
+
+.drop-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    background-size: 100px;
+    background-color: rgb(15, 15, 15);
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+    width: 180px;
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    visibility: hidden;
+    transition: 100ms linear;
+}
+
+.drop-down li {
+    margin-bottom: 8px;
+}
+
+.drop-down li a {
+    position: relative;
+}
+
+.drop-down li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0.5px;
+    background-color: white;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.drop-down li a:hover::after {
+    width: 100%;
+}
+
+.drop-block:hover > .drop-down {
+    visibility: visible;
+    transform: rotateX(0deg);
 }
 
 .aside-left {
