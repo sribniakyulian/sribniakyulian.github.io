@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Advent Pro";
+  src: url("font/AdventPro-Italic-VariableFont_wdth,wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Advent Pro", serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+}
+
+.background-img {
+    width: 100%;
+    height: auto;
+    position: fixed;
+}
+
+.center-content {
+    display: flex;
+    background-color: rgba(14, 14, 14, 0.8);
+    box-shadow: black 0 0 15px ;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    padding: 50px 15px;
+}
+
+.about-center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(14, 14, 14, 0.8);
+    box-shadow: black 0 0 15px ;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    padding: 50px 15px;
+}
+
+.center-content-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px 15px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.column-content ul > * , .price-list-content tr > *, .about-column-content ul > * {
+    padding-top: 10px;
+}
+
+.about-column-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+
+.redirect {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redirect a {
+    color: white;
+    padding: 10px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: .3s ease;
+    border-radius: 5px;
+}
+
+.redirect a:hover {
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.price-list-content {
+    margin-left: 125px;
+}
+
+.price-list-content td {
+    border-bottom: 1px solid white;
+}
+
+table {
+    width: 300px;
+    height: auto;
+}
+
+.about-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 15px;
+}
+.about-img a img {
+    width: 35px;
+    height: auto;
+    transition: .3s ease;
+}
+
+.about-img a img:hover {
+    width: 37px;
+    filter: brightness(50%);
+}
