@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Advent Pro";
+  src: url("font/AdventPro-Italic-VariableFont_wdth,wght.ttf");
+}
+
+:root {
+    --main-color: #1e1e1e;
+    --aside-color: #151515;
+    --back-color: #2c2c2c;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +17,8 @@
     font-family: "Advent Pro", serif;
 }
 
-ul {
+ul, address, a {
+    color: white;
     list-style: none;
 }
 
@@ -14,16 +26,16 @@ body, html {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #2c2c2c;
+    background-color: var(--back-color);
     scroll-behavior: smooth;
 }
 
-.main-content {
+.body-content {
     width: 68%;
     height: 100%;
 }
 
-.main-content-flex {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,22 +44,32 @@ body, html {
     height: 100%;
 }
 
-.header {
+header {
     display: flex;
     justify-content: center;
     position: fixed;
     width: inherit;
     height: 65px;
-    background-color: rgb(15, 15, 15);
+    background-color: var(--aside-color);
     border-bottom: 1px solid white;
 }
 
-.header li {
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    height: 100%;
+}
+
+nav ul li {
     height: 100%;
     float: right;
 }
 
-.header a {
+nav ul li a {
     display: flex;
     align-items: center;
     height: 100%;
@@ -55,24 +77,25 @@ body, html {
     color: white;
     transition: .2s ease;
 }
-.navigation-down li a:hover:not(.drop-down li a) {
+
+.navigation li a:hover:not(.dropdown-menu li a) {
     background-color: white;
-    color: rgb(16, 16, 16);
+    color: black;
 }
 
-.navigation-down li:not(.drop-down li) {
+.navigation li:not(.dropdown-menu li) {
     height: 100%;
     margin: 0 80px;
     position: relative;
 }
 
-.drop-down {
+.dropdown-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 15px;
     background-size: 100px;
-    background-color: rgb(15, 15, 15);
+    background-color: var(--aside-color);
     box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
     width: 180px;
     position: absolute;
@@ -82,15 +105,15 @@ body, html {
     transition: 100ms linear;
 }
 
-.drop-down li {
+.dropdown-menu li {
     margin-bottom: 8px;
 }
 
-.drop-down li a {
+.dropdown-menu li a {
     position: relative;
 }
 
-.drop-down li a::after {
+.dropdown-menu li a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -102,16 +125,16 @@ body, html {
     transform: translateX(-50%);
 }
 
-.drop-down li a:hover::after {
+.dropdown-container li a:hover::after {
     width: 100%;
 }
 
-.drop-block:hover > .drop-down {
+.dropdown-container:hover > .dropdown-menu {
     visibility: visible;
     transform: rotateX(0deg);
 }
 
-.aside-left {
+aside {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,19 +142,15 @@ body, html {
     height: 100%;
     border-right: 1px solid white;
     color: white;
-    background-color: rgb(16, 16, 16);
+    background-color: var(--aside-color);
 }
 
-.aside-left-content {
+.sidebar-left {
     padding: 25px 15px;
 }
 
-.aside-left-content-header > * {
+.sidebar-left-header article > * {
     margin-top: 15px;
-}
-
-.aside-left-content-text-block p {
-    font-size: 14px;
 }
 
 .logo {
@@ -140,33 +159,37 @@ body, html {
     height: auto;
 }
 
-.aside-left-content-text-block li {
+.sidebar-left-block p {
+    font-size: 14px;
+}
+
+.sidebar-left-block li {
     display: flex;
     justify-content: space-between;
 }
 
-.content {
+.resume-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 75%;
     height: 100%;
-    background-color: #1f1f1f;
+    background-color: var(--main-color);
 }
 
-.content-block {
+.resume-entry {
     width: 100%;
     height: 100%;
     padding: 20px;
     color: white;
 }
 
-.content-block-text > *:not(:last-child) {
+.content-block-article > *:not(:last-child) {
     margin-bottom: 5px;
 }
 
-.content-block > *:not(:first-child) {
+.resume-entry > *:not(:first-child), .resume-entry section > *:not(:first-child) {
     margin-top: 15px;
 }
 
@@ -174,12 +197,12 @@ body, html {
     margin-left: 20px;
 }
 
-.right-block {
+.align-right {
     font-size: 12px;
     margin-left: auto;
 }
 
-.content-block-text-center {
+.content-block-text {
     display: flex;
     align-items: center;
 }
