@@ -1,15 +1,10 @@
-@font-face {
-  font-family: "Advent Pro";
-  src: url("font/AdventPro-Italic-VariableFont_wdth,wght.ttf");
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: "Advent Pro", serif;
+    font-family: 'Advent Pro', sans-serif;
 }
 
 body {
