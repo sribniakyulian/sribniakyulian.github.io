@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    border-spacing: 0;
+    border: 2px solid black;
+}
+
+td {
+    text-align: center;
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    background-color: silver;
+    transition: 0.1s ease;
+}
+
+td:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    font-size: 50px;
+}
+
+tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even) {
+    background-color: #f3f3f3;
+}
