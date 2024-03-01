@@ -102,6 +102,10 @@ nav ul li a {
     transition: 100ms linear;
 }
 
+.dropdown-menu .dropdown-menu {
+    transform: rotateY(-90deg) rotateX(-45deg);
+}
+
 .dropdown-menu li {
     display: flex;
     justify-content: center;
