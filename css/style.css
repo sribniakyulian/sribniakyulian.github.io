@@ -32,8 +32,6 @@ body, html {
 
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 65px;
     width: 100%;
     height: 100%;
@@ -47,12 +45,6 @@ header {
     height: 65px;
     background-color: var(--aside-color);
     border-bottom: 1px solid white;
-}
-
-nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .navigation {
@@ -79,19 +71,16 @@ nav ul li a {
 }
 
 .navigation li:not(.dropdown-menu li) {
-    height: 100%;
     margin: 0 80px;
-    position: relative;
 }
 
 .dropdown-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-size: 15px;
     background-size: 100px;
     background-color: var(--aside-color);
-    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
     border-right: 1px solid white;
     border-bottom: 1px solid white;
     width: 180px;
@@ -109,13 +98,8 @@ nav ul li a {
 .dropdown-menu li {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     margin-bottom: 8px;
-    position: relative;
-}
-
-.dropdown-menu li a {
     position: relative;
 }
 
@@ -125,14 +109,14 @@ nav ul li a {
     bottom: 0;
     left: 50%;
     width: 0;
-    height: 0.5px;
+    height: .5px;
     background-color: white;
-    transition: width 0.3s ease;
+    transition: width .3s ease;
     transform: translateX(-50%);
 }
 
 .dropdown-container li a:hover::after {
-    width: 100%;
+    width: 80%;
 }
 
 .dropdown-container:hover > .dropdown-menu {
@@ -145,10 +129,13 @@ nav ul li a {
     left: 180px;
 }
 
+.dropdown-container a, .dropdown-menu {
+    cursor: pointer;
+}
+
 aside {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 25%;
     height: 100%;
     border-right: 1px solid white;
@@ -180,18 +167,12 @@ aside {
 }
 
 .resume-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 75%;
     height: 100%;
     background-color: var(--main-color);
 }
 
 .resume-entry {
-    width: 100%;
-    height: 100%;
     padding: 20px;
     color: white;
 }
