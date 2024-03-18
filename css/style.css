@@ -47,13 +47,11 @@ header {
     border-bottom: 1px solid white;
 }
 
-.navigation {
+.header-nav, .navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
     height: 100%;
-}
-
-nav ul li {
-    height: 100%;
-    float: right;
 }
 
 nav ul li a {
@@ -68,10 +66,6 @@ nav ul li a {
 .navigation li a:hover:not(.dropdown-menu li a) {
     background-color: white;
     color: black;
-}
-
-.navigation li:not(.dropdown-menu li) {
-    margin: 0 80px;
 }
 
 .dropdown-menu {
