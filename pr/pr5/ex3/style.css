@@ -1,0 +1,30 @@
+div {
+    font-family: "Advent Pro", serif;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 0;
+}
+
+.section {
+    float: right;
+    width: 25%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.s1, .s3 {
+    background-color: #ddd;
+}
+
+.s2, .s4 {
+    background-color: #ccc;
+}
+
+#header, #footer {
+    clear: right;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    margin: 10px 0;
+}

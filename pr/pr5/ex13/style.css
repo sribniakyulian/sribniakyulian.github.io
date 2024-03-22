@@ -1,0 +1,49 @@
+div {
+    font-family: "Advent Pro", serif;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 28px 0;
+}
+
+div div {
+    background-color: silver;
+    color: darkred;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 25px;
+}
+
+.grid-1 {
+    grid-column: span 1;
+}
+
+.grid-3 {
+    grid-column: span 3;
+}
+
+.grid-4 {
+    grid-column: span 4;
+}
+
+.grid-one-third {
+    grid-column: span 4;
+}
+
+.grid-two-thirds {
+    grid-column: span 8;
+}
+
+.grid-6 {
+    grid-column: span 6;
+}
+
+.grid-half {
+    grid-column: span 6;
+}
+
+.grid-12 {
+    grid-column: span 12;
+}
